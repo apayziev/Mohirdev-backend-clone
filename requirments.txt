@@ -1,0 +1,8 @@
+django
+djangorestframework
+psycopg2-binary
+django-debug-toolbar
+pep8
+pylint
+unidecode
+pillow
