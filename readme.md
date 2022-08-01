@@ -1,4 +1,5 @@
 **Boilerplate to create Django project.**
+#
 
 **Usage:**
 
@@ -24,3 +25,6 @@
 
 
 8. Enjoy!
+
+
+Link for the site: <https://mohirdev.uz>
