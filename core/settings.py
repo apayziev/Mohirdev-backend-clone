@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     'ckeditor',
     'ckeditor_uploader',
+    'django_filters',
     # Local apps
     "common",
     "course",
@@ -193,6 +194,10 @@ CKEDITOR_CONFIGS = {
 SWAGGER_SETTINGS = {
     'LOGIN_URL': 'rest_framework:login',
     'LOGOUT_URL': 'rest_framework:logout',
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
 try:

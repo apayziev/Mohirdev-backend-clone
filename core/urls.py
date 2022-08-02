@@ -32,6 +32,10 @@ urlpatterns = [
     path('docs/', include_docs_urls(title=API_TITLE, 
                                     description=API_DESCRIPTION)),
     path('swagger-docs/', schema_view),
+
+    # local apps urls
+    path('courses/', include('course.urls'), name='courses'),
+
 ]
 
 # MEDIA URLS

@@ -76,7 +76,8 @@ class Course(BaseModel):
     )
     price = models.IntegerField(default=0)
 
-    status = models.CharField(max_length=255, choices=COURSE_STATUS)
+    status = models.CharField(max_length=255, choices=COURSE_STATUS,
+                default="bepul", verbose_name="Course Status")
     author = models.ForeignKey(
         CourseAuthor, on_delete=models.CASCADE, related_name="courses"
     )
@@ -144,19 +145,19 @@ class CourseReview(BaseModel):
         verbose_name_plural = "Course Reviews"
 
 
-class CourseEnrollment(BaseModel):
-    course = models.ForeignKey(
-        Course, on_delete=models.CASCADE, related_name="enrollments"
-    )
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="enrollments")
+# class CourseEnrollment(BaseModel):
+#     course = models.ForeignKey(
+#         Course, on_delete=models.CASCADE, related_name="enrollments"
+#     )
+#     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="enrollments")
 
-    def __str__(self):
-        return f"{self.user} - {self.course}"
+#     def __str__(self):
+#         return f"{self.user} - {self.course}"
 
-    class Meta:
-        verbose_name = "Course Enrollment"
-        verbose_name_plural = "Course Enrollments"
+#     class Meta:
+#         verbose_name = "Course Enrollment"
+#         verbose_name_plural = "Course Enrollments"
 
 
-class CourseProgress(BaseModel):
-    pass
+# class CourseProgress(BaseModel):
+#     pass
