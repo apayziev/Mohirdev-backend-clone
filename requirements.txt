@@ -6,3 +6,4 @@ pep8
 pylint
 unidecode
 pillow
+django-ckeditor

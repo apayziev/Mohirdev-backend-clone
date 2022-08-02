@@ -133,6 +133,7 @@ dmypy.json
 *.pyc
 __pycache__
 media
+.migrations
 
 # Backup files #
 *.bak
